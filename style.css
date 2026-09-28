@@ -1,0 +1,86 @@
+/* Reset a few defaults and set a pleasant base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* The calculator card */
+.calculator {
+  width: 320px;
+  background: #1e1e2f;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* The number display */
+.display {
+  background: #12121c;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 20px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  min-height: 80px;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+/* 4-column button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 20px 0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background: #2d2d44;
+  color: #fff;
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-operator {
+  background: #ff9500;
+}
+
+.btn-equals {
+  background: #34c759;
+}
+
+.btn-clear {
+  background: #ff3b30;
+}
+
+.btn-action {
+  background: #3a3a55;
+}
+
+/* The 0 button spans two columns */
+.btn-zero {
+  grid-column: span 2;
+}
